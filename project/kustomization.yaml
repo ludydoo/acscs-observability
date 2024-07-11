@@ -1,2 +1,3 @@
 resources:
-  - ./user-workload-monitoring.yaml
+  - ./openshift-monitoring.yaml
+  - ./openshift-user-workload-monitoring.yaml
