@@ -1,0 +1,13 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: central
+  namespace: rhacs-cq7rvkd487bc73eprk3g
+spec:
+  endpoints:
+    - interval: 30s
+      port: monitoring
+      scheme: http
+  selector:
+    matchLabels:
+      app.kubernetes.io/component: central

@@ -1,0 +1,2 @@
+resources:
+  - ./central-service-monitor.yaml
