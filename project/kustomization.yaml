@@ -1,4 +1,5 @@
 resources:
+  - ./grafana.yaml
   - ./grafana-operator.yaml
   - ./openshift-monitoring.yaml
   - ./openshift-user-workload-monitoring.yaml
