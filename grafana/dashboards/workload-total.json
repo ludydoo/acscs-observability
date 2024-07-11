@@ -489,7 +489,7 @@
                "type": "prometheus",
                "uid": "${datasource}"
             },
-            "hide": 2,
+            "hide": 0,
             "label": "cluster",
             "name": "cluster",
             "query": "label_values(kube_pod_info{job=\"kube-state-metrics\"}, cluster)",
