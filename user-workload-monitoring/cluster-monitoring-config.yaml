@@ -8,3 +8,6 @@ data:
     enableUserWorkload: true
     alertmanagerMain:
       enableUserAlertmanagerConfig: true
+    alertmanager:
+      enabled: true
+      enableAlertmanagerConfig: true 
