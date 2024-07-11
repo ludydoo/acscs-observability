@@ -2,3 +2,4 @@ resources:
   - ./grafana.yaml
   - ./folder.yaml
   - ./dashboards.yaml
+  - ./rules.yaml

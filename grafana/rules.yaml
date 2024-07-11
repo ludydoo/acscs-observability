@@ -2,7 +2,7 @@ apiVersion: monitoring.coreos.com/v1
 kind: PrometheusRule
 metadata:
   name: recording-rules
-  namespace: openshift-user-workload-monitoring
+  namespace: grafana
 spec:
   groups:
     - "interval": "3m"

@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 oc label ns "openshift-monitoring" argocd.argoproj.io/managed-by=openshift-gitops
+oc label ns "openshift-user-workload-monitoring" argocd.argoproj.io/managed-by=openshift-gitops
 
 oc apply -f - <<EOF
 apiVersion: argoproj.io/v1alpha1
