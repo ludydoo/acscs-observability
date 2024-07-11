@@ -18,8 +18,6 @@ kind: GrafanaDashboard
 metadata:
   namespace: grafana
   name: "${WITHOUT_EXT}"
-  labels:
-    dashboards: "grafana"
 spec:
   instanceSelector:
     matchLabels:
