@@ -11,6 +11,6 @@ spec:
     kind: Service
     name: grafana-service
     weight: 100
-  ports:
+  port:
     targetPort: 3000
   wildcardPolicy: None
