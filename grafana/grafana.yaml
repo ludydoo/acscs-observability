@@ -6,15 +6,6 @@ metadata:
   name: ocp-injected-certs
   namespace: grafana
 ---
-apiVersion: v1
-data:
-  session_secret: # todo
-kind: Secret
-metadata:
-  name: grafana-proxy
-  namespace: grafana
-type: Opaque
----
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
