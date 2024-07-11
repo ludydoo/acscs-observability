@@ -1,0 +1,17 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: central-rules
+spec:
+  groups:
+    - name: rhacs-central
+      rules:
+        - alert: RHACSCentralPostgresConnectionDown
+          expr: avg_over_time(rox_central_postgres_connected{container="central"}[10m]) < 0.5
+          for: 20m
+          labels:
+            severity: critical
+          annotations:
+            summary: "Central container `{{ $labels.pod }}/{{ $labels.container }}` database connection in namespace `{{ $labels.namespace }}` is down or is in a bad shape."
+            description: "Central container `{{ $labels.pod }}/{{ $labels.container }}` database connection in namespace `{{ $labels.namespace }}` has been down or is in a bad shape for at least 10 minutes."
+            sop_url: "https://gitlab.cee.redhat.com/stackrox/acs-managed-service-runbooks/blob/master/sops/dp-010-rhacs-instance-db-unavailable.md"

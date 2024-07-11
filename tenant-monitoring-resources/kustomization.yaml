@@ -1,2 +1,3 @@
 resources:
   - ./central-service-monitor.yaml
+  - ./central-rules.yaml
