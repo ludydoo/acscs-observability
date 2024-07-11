@@ -9,6 +9,11 @@ spec:
     automated:
       prune: true
       selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+    managedNamespaceMetadata:
+      labels:
+        argocd.argoproj.io/managed-by: openshift-gitops
   source:
     repoURL: https://github.com/ludydoo/acscs-observability
     targetRevision: HEAD
@@ -16,3 +21,4 @@ spec:
   destination:
     server: https://kubernetes.default.svc
     namespace: openshift-monitoring
+    syncOptions:
