@@ -1,0 +1,3 @@
+resources:
+  - ./rules.yaml
+  - ./cluster-monitoring-config.yaml
