@@ -20,4 +20,4 @@ spec:
     path: grafana-operator
   destination:
     server: https://kubernetes.default.svc
-    namespace: grafana-operator
+    namespace: openshift-operators
