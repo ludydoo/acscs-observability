@@ -1,0 +1,16 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: prometheus-custom-route
+  namespace: openshift-user-workload-monitoring
+spec:
+  to:
+    kind: Service
+    name: prometheus-user-workload
+    weight: 100
+  port:
+    targetPort: thanos-proxy
+  tls:
+    termination: reencrypt
+    insecureEdgeTerminationPolicy: Redirect
+  wildcardPolicy: None
