@@ -7,7 +7,7 @@ spec:
     - name: rhacs-central
       rules:
         - alert: TestAlert
-          expr: verb:apiserver_request_duration_seconds_bucket:rate1m > 0
+          expr: verb:apiserver_request_duration_seconds_bucket:rate1m{namespace=~".*"} > 0
           labels:
             severity: critical
           annotations:
