@@ -6,10 +6,10 @@ metadata:
 spec:
   to:
     kind: Service
-    name: prometheus-user-workload
+    name: prometheus-operated
     weight: 100
   port:
-    targetPort: thanos-proxy
+    targetPort: web
   tls:
     termination: reencrypt
     insecureEdgeTerminationPolicy: Redirect
