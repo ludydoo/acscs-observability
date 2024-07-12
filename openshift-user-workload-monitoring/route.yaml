@@ -12,5 +12,5 @@ spec:
     targetPort: web
   tls:
     termination: passthrough
-    insecureEdgeTerminationPolicy: Redirect
+    insecureEdgeTerminationPolicy: None
   wildcardPolicy: None
