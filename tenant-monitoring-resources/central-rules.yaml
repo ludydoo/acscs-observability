@@ -6,9 +6,8 @@ spec:
   groups:
     - name: rhacs-central
       rules:
-        - alert: RHACSCentralPostgresConnectionDown
-          expr: avg_over_time(rox_central_postgres_connected{container="central"}[10m]) < 0.5
-          for: 20m
+        - alert: TestAlert
+          expr: verb:apiserver_request_duration_seconds_bucket:rate1m > 0
           labels:
             severity: critical
           annotations:
