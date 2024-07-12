@@ -9,7 +9,7 @@ spec:
     name: prometheus-user-workload
     weight: 100
   port:
-    targetPort: metrics
+    targetPort: thanos-proxy
   tls:
     termination: reencrypt
     insecureEdgeTerminationPolicy: Redirect
