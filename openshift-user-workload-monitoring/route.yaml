@@ -6,10 +6,10 @@ metadata:
 spec:
   to:
     kind: Service
-    name: prometheus-operated
+    name: prometheus-user-workload
     weight: 100
   port:
-    targetPort: web
+    targetPort: metrics
   tls:
     termination: reencrypt
     insecureEdgeTerminationPolicy: Redirect
